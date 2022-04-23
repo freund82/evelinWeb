@@ -27,6 +27,9 @@ p{
     --p-color:#7C8499;
     --p-font-family:'Open Sans', sans-serif;
     --link-color:#5231FF;
+    --button-background:#5231FF;
+    --button-text-color:#fff;
+    --line-color: #E4ECF6;
 }
 
 .container{
@@ -34,9 +37,17 @@ p{
     padding-bottom:4rem;
     display:grid;
     grid-template-columns: minmax(auto, 12rem) minmax(auto, 120rem) minmax(auto, 12rem);
-    grid-template-rows: 6rem 9.6rem 220.5rem 15.6rem 8.4rem 43.1rem 48.6rem 32.6rem;
-    grid-template-areas: ". header .";
+    grid-template-rows: 6rem 18.6rem 220.5rem 38.05rem 43.1rem 48.6rem 32.6rem;
+    grid-template-areas: ". header ."
+                         ". mainTitle ."
+                         ". mainBlock ."
+                         ". concepts ."
+                         ". pages ."
+                         ". signUp .";
 }
+
+
+/*Header*/
 
 header{
     grid-area:header;
@@ -60,6 +71,7 @@ header{
 a{
     color:var(--menu-color);
     text-decoration: none;
+    cursor:pointer;
 }
 a:hover{
     color:var(--link-color);
@@ -69,4 +81,279 @@ a:hover{
     top:-0.8rem;
     right:8rem;
     z-index:1000;
+}
+
+/*Main section */
+.mainTitle{
+    grid-area:mainTitle;
+    text-align:center;
+    padding-top:9.4rem;
+}
+.mainTitle p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color:var(--p-color);
+}
+.mainTitle h1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.9rem;
+    line-height: 5rem;
+    color:var(--title-color);
+}
+.mainBlock{
+    grid-area:mainBlock;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top:5rem;
+    border-bottom:0.1rem solid var(--line-color);
+}
+.mainBlock-button{
+    width:12rem;
+    height:2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--button-text-color);
+    background: var(--button-background);
+    border-radius:0.5rem;
+    margin-bottom:2.1rem;
+}
+.mainBlock-button:hover{
+    background: var(--button-text-color);
+    color:var(--button-background);
+}
+.mainBlock-first{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainBlock-first img{
+    max-width:100%;
+    margin-bottom:4rem;
+}
+.mainBlock-second{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainBlock-second img{
+    max-width:100%;
+    margin-bottom:4rem;
+}
+
+/*Concepts*/
+.concepts{
+    grid-area:concepts;
+    margin-top:8rem;
+    text-align:center;
+}
+.concepts p:first-child{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color:var(--p-color);
+    margin-bottom:1rem;
+}
+.concepts span{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 5rem;
+    color:var(--title-color);
+}
+.conceptsInfo{
+    margin-top:6.2rem;
+    display:flex;
+    justify-content: space-around;
+}
+.conceptsInfo-item p:first-child{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 2.4rem;
+    margin-bottom:1.6rem;
+    color:var(--link-color);
+}
+.conceptsInfo-item p:nth-child(2){
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color:var(--p-color);
+}
+
+/*pages*/
+.pages{
+    margin-top:8rem;
+    grid-area:pages;
+    border-top:0.1rem solid var(--line-color);
+    padding-top:8rem;
+    display:flex;
+    justify-content: space-between;
+}
+.pagesText{
+    width:40.4rem;
+}
+.pagesText p:first-child{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color:var(--p-color);
+    margin-bottom:1rem;
+}
+.pagesText p:nth-child(2){
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    color:var(--title-color);
+    margin-bottom:1rem;
+    text-indent: 1rem;
+}
+.pagesText p:nth-child(3){
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color:var(--p-color);
+    margin-top:2.2rem;
+    margin-bottom: 3.8rem;
+}
+button{
+    font-family: 'Bitter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background: var(--button-background);
+    color:var(--button-text-color);
+    border-radius:2.5rem;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    padding:1.5rem 3rem 1.5rem 3rem;
+}
+button:hover{
+    background: var(--button-text-color);
+    color:var(--button-background);
+}
+
+.pagesText-blocks{
+    width:100%;
+    max-width:69.166rem;
+    display:flex;
+    justify-content: left;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.pagesText-blocks span{
+    width:21.9rem;
+    height:5.5rem;
+    border:0.1rem solid var(--line-color);
+    border-radius:0.8rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    padding-top:1.1rem;
+}
+
+/*SignUp*/
+.signUp{
+    grid-area: signUp;
+    margin:auto;
+    margin-top:10rem;
+}
+.signUp-form{
+    position:relative;
+    z-index:100;
+}
+.signUp-form img{
+    max-width:100%;
+}
+.signUp-formTextBlock{
+    width:100%;
+    max-width:49.9rem;
+    position:absolute;
+    top:13.4rem;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:1000;
+    color:var(--button-text-color);
+    text-align: center;
+}
+.signUp-formTextBlock p:first-child{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.9rem;
+    line-height: 5rem;
+    margin-bottom:2.5rem;
+}
+.signUp-formTextBlock p:nth-child(2){
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-bottom:10.8rem;
+}
+input{
+    width:43.2rem;
+    height:5rem;
+    background: var(--button-text-color);
+    border: 0.1rem solid var(--button-text-color);
+    border-radius: 5rem 0 0 5rem;
+    font-family: 'Bitter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding-left:2rem;
+}
+.signUp-formInputBlock{
+    position:relative;
+    z-index:100;
+}
+.signUp-formButton{
+    position:absolute;
+    top:0;
+    right:-10%;
+    z-index:1000;
+}
+.signUp-formTextBlock p:last-child{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-top:1.7rem;
+    color:var(--p-color);
+}
+/*Media*/
+@media(max-width:1300px){
+    .container{
+        grid-template-areas: ". header ."
+                             ". mainTitle ."
+                             "mainBlock mainBlock mainBlock"
+                             "concepts concepts concepts"
+                             "pages pages pages"
+                             "signUp signUp signUp";
+    }
+}
+
+@media(max-width:1200px){
+    .headerMenu{
+        display:none;
+    }
 }
