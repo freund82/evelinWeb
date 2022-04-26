@@ -427,6 +427,7 @@ input{
                              "pages pages pages"
                              "signUp signUp signUp"
                              "footer footer footer";
+        grid-template-rows: auto;
     }
 }
 
