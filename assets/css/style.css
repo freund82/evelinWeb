@@ -30,6 +30,7 @@ p{
     --button-background:#5231FF;
     --button-text-color:#fff;
     --line-color: #E4ECF6;
+    --footer-title-color:#000;
 }
 
 .container{
@@ -37,13 +38,14 @@ p{
     padding-bottom:4rem;
     display:grid;
     grid-template-columns: minmax(auto, 12rem) minmax(auto, 120rem) minmax(auto, 12rem);
-    grid-template-rows: 6rem 18.6rem 220.5rem 38.05rem 43.1rem 48.6rem 32.6rem;
+    grid-template-rows: 6rem 18.6rem 220.5rem 38.05rem 43.1rem 59rem 32.6rem;
     grid-template-areas: ". header ."
                          ". mainTitle ."
                          ". mainBlock ."
                          ". concepts ."
                          ". pages ."
-                         ". signUp .";
+                         ". signUp ."
+                         ". footer .";
 }
 
 
@@ -340,6 +342,81 @@ input{
     margin-top:1.7rem;
     color:var(--p-color);
 }
+
+/*Footer*/
+.footer{
+    grid-area:footer;
+}
+.footer-inner{
+    margin-top:9rem;
+    border-bottom:0.1rem solid var(--line-color);
+    display:flex;
+}
+.footer-innerFirstColumn{
+    width:100%;
+    max-width:61rem;
+}
+.footer-innerFirstColumnText{
+    width:100%;
+    max-width:28.5rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-innerSecondColumn{
+    width:100%;
+    max-width:28.5rem;
+    height:19.5rem;
+}
+.footer-innerColumnTextTitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    color: var(--footer-title-color);
+    margin-bottom:3rem;
+}
+.footer-innerFirstColumnInnerText{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color:var(--p-color);
+    margin-bottom:2.3rem;
+}
+.footer-innerFirstColumnIcon{
+    margin-bottom:5.2rem;
+}
+.footer-innerColumnLinksBlock{
+    height:16.2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footerButton{
+    width:11.6rem;
+    height:2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;  
+}
+.footer-Copyright{
+    height:6.7rem;
+    margin-bottom:2rem;
+    display:flex;
+    justify-content: space-between;
+}
+.footer-Copyright--first{
+    display:inline-flex;
+    align-items: center;
+}
 /*Media*/
 @media(max-width:1300px){
     .container{
@@ -348,7 +425,8 @@ input{
                              "mainBlock mainBlock mainBlock"
                              "concepts concepts concepts"
                              "pages pages pages"
-                             "signUp signUp signUp";
+                             "signUp signUp signUp"
+                             "footer footer footer";
     }
 }
 
